@@ -1,0 +1,13 @@
+{
+    "image":"mcr.microsoft.com/devcontainers/universal:2",
+    "forwardPorts": [8000],
+    "postCreateCommand": "pip install -r requirements.txt && npm ci",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "github.copilot",
+                "ms-python.python"
+            ]
+        }
+    }
+}
