@@ -1,0 +1,1 @@
+TargetFilename IN ("/etc/cron.d/*", "/etc/cron.daily/*", "/etc/cron.hourly/*", "/etc/cron.monthly/*", "/etc/cron.weekly/*", "/var/spool/cron/crontabs/*") OR TargetFilename IN ("*/etc/cron.allow*", "*/etc/cron.deny*", "*/etc/crontab*")
