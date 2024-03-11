@@ -45,6 +45,10 @@ jobs:
 
     - name: SigmaルールをSplunk形式に変換
       run: |
+       for file in rules/sigma/*.yml; do
+          splunk_filename=$(echo $file | sed 's/sigma/splunk/' | sed 's/.yml$/.spl/')
+          sigma convert -t splunk -p splunk_windows $file -o $splunk_filename
+        done
 
 
     - name: Splunk形式のルールをコミット
